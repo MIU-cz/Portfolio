@@ -1,0 +1,712 @@
+* {
+  transition: all 0.3s ease 0.1s;
+}
+
+body {
+  background-color: #8e8e8e;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  height: 90px;
+  color: #ffffff;
+  background-color: #0c0c0e;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar .navbar__title h1 {
+  font-family: "Forum", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+}
+.navbar .navbar__navmenu {
+  margin: 0 40px 0 auto;
+}
+.navbar .navbar__navmenu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.navbar .navbar__navmenu a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.navbar .navbar__navmenu a:hover {
+  color: #bb945f;
+  text-decoration: underline;
+}
+.navbar .navbar__userico {
+  width: 28px;
+  height: 28px;
+}
+.navbar .navbar__userico a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.navbar .navbar__userico a:hover svg path {
+  fill: #bb945f;
+}
+.navbar .navbar__userico svg {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section__wellcome {
+  width: 100%;
+  height: 600px;
+  padding: 0;
+  position: relative;
+  background-size: cover;
+  background-image: linear-gradient(180deg, #0c0c0e 0%, #0c0c0e 0.01%, rgba(18, 18, 21, 0.1) 100%), url(../images/header/Welcome-bg-clear.png);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.section__wellcome_title {
+  width: 600px;
+  height: 220px;
+  margin: 220px auto auto 0;
+  padding: 35px 40px;
+  background-color: #0c0c0e;
+}
+.section__wellcome_title h2,
+.section__wellcome_title p {
+  font-family: "Forum", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section {
+  width: 100%;
+  padding: 20px 20px 40px;
+  background-color: #ffffff;
+}
+.section__title {
+  width: 100%;
+}
+.section__title h2 {
+  text-align: center;
+  color: #0c0c0e;
+  font-family: "Forum", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.section__title h2::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  height: 1px;
+  margin: 20px auto 0;
+  background-color: #0c0c0e;
+}
+.section__description {
+  width: 100%;
+  margin-top: 40px;
+  color: #000000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.section__about {
+  padding-bottom: 35px;
+}
+.section__about_gallerie {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.section__about_gallerie .gallerie_item {
+  width: 450px;
+  height: 560px;
+}
+.section__about_gallerie .gallerie_item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section__about_pagBtns {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+}
+.section__about_pagBtns .btn {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  background: none;
+}
+.section__about_pagBtns .btn::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #0c0c0e;
+}
+.section__about_pagBtns .btn:hover::after, .section__about_pagBtns .btn:active::after, .section__about_pagBtns .btn:focus::after {
+  background-color: #bb945f;
+}
+
+.section__favorites_filter {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.filter__season {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+.filter__season .filter_title {
+  text-align: left;
+  font-weight: 700;
+}
+
+.filter_items {
+  margin-top: 40px;
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.filter_items li {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.filter_items li:hover,
+.filter_items label:hover,
+.filter_items input:hover {
+  cursor: pointer;
+}
+.filter_items label {
+  font-weight: 400;
+}
+.filter_items input {
+  width: 17px;
+  height: 17px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+.filter_items input:checked {
+  position: relative;
+}
+.filter_items input:checked::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.filter_items input:checked + label, .filter_items input:hover + label {
+  font-weight: 700;
+}
+
+.section__favorites_library {
+  width: 100%;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-flow: row;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+
+.library__item {
+  width: 590px;
+  height: 555px;
+  position: relative;
+}
+
+.item__container_content {
+  width: 550px;
+  height: 100%;
+  padding: 15px 20px;
+  border: 1px solid #000000;
+}
+.item__container_content .content_stuff {
+  color: #000000;
+  font-family: "Forum", cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.item__container_content .content_stuff::after {
+  content: " ";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #bb945f;
+}
+.item__container_content .content_title {
+  margin-top: 20px;
+}
+.item__container_content .content_title h3,
+.item__container_content .content_title h4 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+.item__container_content .content_title .book_title {
+  text-transform: uppercase;
+}
+.item__container_content .content_title .book_autor {
+  text-transform: capitalize;
+}
+.item__container_content .content_description {
+  margin-top: 20px;
+  width: 355px;
+  height: 320px;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.item__container_content .content_btn {
+  margin-top: 15px;
+  width: 75px;
+  height: 30px;
+}
+.item__container_content .content_btn .btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.item__container_content .content_btn .btn-buy:hover {
+  border-color: #bb945f;
+  background-color: #bb945f;
+}
+.item__container_content .content_btn .btn-own {
+  color: #bb945f;
+  border-color: #bb945f;
+  cursor: auto;
+}
+
+.item__container_bookcover {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.item__container_bookcover img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section__coffeshop .section__description {
+  letter-spacing: 2px;
+}
+
+.section__coffeshop_grid {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section__coffeshop_grid .grid__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.section__coffeshop_grid .grid__col .grid__col_title {
+  color: #bb945f;
+  font-family: "Forum", cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.section__coffeshop_grid .grid__col .grid__col_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section__coffeshop_grid .grid__col:last-child {
+  align-items: flex-end;
+}
+.section__coffeshop_grid .grid__col:last-child .grid__col_menu {
+  align-items: flex-end;
+}
+
+.menu_item {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.item_coast {
+  font-family: "Forum", cursive;
+}
+.item_coast::before {
+  content: " ";
+  display: inline-block;
+  width: 100px;
+  height: 1px;
+  background-color: #bb945f;
+  vertical-align: middle;
+  margin-right: 60px;
+}
+
+.section__contacts_grid {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.section__contacts_grid .grid__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.section__contacts_grid .grid__col:last-child {
+  width: 696px;
+  height: 414px;
+}
+.section__contacts_grid .grid__col:last-child iframe {
+  width: 100%;
+  height: 100%;
+}
+.section__contacts_grid h3 {
+  font-weight: 700;
+}
+.section__contacts_grid a {
+  text-decoration: none;
+  color: inherit;
+}
+.section__contacts_grid a:hover {
+  color: #bb945f;
+  font-weight: 700;
+}
+
+.contacts_items ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacts_items li,
+.contacts_items a {
+  font-weight: 400;
+}
+
+.contacts_staff span {
+  display: inline-block;
+  margin-top: 20px;
+  line-height: 40px;
+}
+.contacts_staff a {
+  font-weight: 700;
+}
+
+.section__libcard_grid {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section__libcard_grid .grid__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-items: center;
+  gap: 30px;
+}
+.section__libcard_grid .grid__col .libcard_title h3 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+.section__libcard_grid .grid__col:last-child {
+  align-items: flex-end;
+  gap: 35px;
+}
+.section__libcard_grid .grid__col:last-child h4 {
+  color: #000000;
+  text-align: center;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+.section__libcard_grid .grid__col:last-child p {
+  display: flex;
+  width: 456px;
+  color: #000000;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+
+.libcard__form_cover {
+  width: 600px;
+  height: 386px;
+  border: 3px solid #bb945f;
+  padding: 20px 20px 30px;
+}
+.libcard__form_cover .findcard_form .form_cover_bg {
+  width: 560px;
+  height: 272px;
+  background-color: #bb945f;
+  padding: 20px 20px 25px;
+}
+.libcard__form_cover .findcard_form .findcard_title {
+  display: inline-block;
+  color: #000000;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+.libcard__form_cover .findcard_form input {
+  width: 520px;
+  height: 66px;
+  border-radius: 10px;
+  background: #ffffff;
+  margin-bottom: 25px;
+  padding: 8px 20px;
+}
+.libcard__form_cover .findcard_form input::-moz-placeholder {
+  color: #8e8e8e;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+}
+.libcard__form_cover .findcard_form input::placeholder {
+  color: #8e8e8e;
+  font-family: "Forum", cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+}
+.libcard__form_cover .findcard_form .form__btn_cover {
+  width: 100%;
+}
+.libcard__form_cover .findcard_form .btn_submit {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 40px;
+  border-radius: 2px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.libcard__form_cover .findcard_form .btn_submit:hover {
+  background-color: #bb945f;
+  border-color: #bb945f;
+}
+
+.libcard_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.libcard_btn {
+  display: flex;
+  width: 75px;
+  height: 30px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.libcard_btn:hover {
+  background-color: #bb945f;
+  border-color: #bb945f;
+}
+
+.container__footer {
+  height: 250px;
+  padding: 20px;
+  background-color: #0c0c0e;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+.container__footer a {
+  color: #ffffff;
+}
+.container__footer a:hover {
+  color: #bb945f;
+}
+
+.footer__row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__row:first-child {
+  margin-bottom: 10px;
+}
+.footer__row:last-child {
+  margin-top: 30px;
+  padding-top: 44px;
+  border-top: solid 1px #ffffff;
+}
+
+.address,
+.worktime {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.day,
+.time {
+  text-align: right;
+}
+
+.socialbtn {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.socialbtn li {
+  width: 24px;
+  height: 24px;
+}
+.socialbtn a {
+  width: 100%;
+  height: 100%;
+}
+.socialbtn a:hover svg path {
+  fill: #bb945f;
+}
+
+.year,
+.rsschool,
+.autor {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}/*# sourceMappingURL=style.css.map */
