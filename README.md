@@ -2,4 +2,4 @@
 my woks
 
 ## Brooklin Library - layout
-https://miu-cz.github.io/Portfolio/brooklin-library/
+* Deploy: [Brooklin-library/](https://miu-cz.github.io/Portfolio/Brooklin-library/)
