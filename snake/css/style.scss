@@ -1,0 +1,21 @@
+.container__game {
+	width: 100%;
+	height: auto;
+	padding: 50px 0;
+	background-image: url("../img/game-bg-main.jpeg");
+	background-size: cover;
+}
+
+.game__canvas {
+	display: block;
+	margin: 0 auto;
+	// width: 600px;
+	// height: 600px;
+
+	// background-image: url("../img/game-bg-img.jpeg");
+	// background-size: cover;
+
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 10px 0 transparentize($color: #000000, $amount: 0.1);
+}
