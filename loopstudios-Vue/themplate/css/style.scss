@@ -1,0 +1,466 @@
+// # Front-end Style Guide
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+// ## Layout
+// The designs were created to the following widths:
+$Mobile: "min-width: 375px";
+$Desktop: "min-width: 1440px";
+
+// ## Colors
+// ### Primary
+$color-White: hsl(0, 0%, 100%);
+$color-Black: hsl(0, 0%, 0%);
+$color-Dark-Gray: hsl(0, 0%, 55%);
+$color-Very-Dark-Gray: hsl(0, 0%, 41%);
+
+// ### Neutral
+
+// ## Typography
+// ### Body Copy
+$Font-size: 15px;
+
+// ### Fonts
+$font-family-Alata: "Alata", sans-serif; // - headers
+$font-Weight-alata: 400;
+$font-family-Josefin: "Josefin Sans", sans-serif; // - paragraf
+$font-Weight-josefin: 300;
+
+// ## Variables
+$main-section-width: 1440px;
+
+// # MAIN STYLES
+// ================================
+body {
+	font-family: $font-family-Josefin;
+	font-size: $Font-size;
+	font-weight: $font-Weight-josefin;
+}
+
+.main__section {
+	width: 100%;
+	margin: 0 auto;
+
+	@media ($Desktop) {
+		width: $main-section-width;
+	}
+}
+
+.section {
+	width: 100%;
+	padding: 0 20px;
+	margin-top: 140px;
+
+	@media (min-width: 1200px) {
+		padding: 0 5vw;
+	}
+
+	@media ($Desktop) {
+		padding: 0 160px;
+	}
+}
+
+// # HEADER STYLES
+// ================================
+.header {
+	height: auto;
+	background-image: url(../images/mobile/image-hero.jpg);
+	background-size: cover;
+
+	@media (min-width: 992px) {
+		height: 650px;
+		background-image: url(../images/desktop/image-hero.jpg);
+	}
+}
+
+.navBar {
+	width: 100%;
+	height: 160px;
+	padding: 5vw;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media (min-width: 992px) {
+		padding: 0 160px;
+	}
+}
+
+.menu {
+	&_items {
+		height: auto;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+
+		@media (min-width: 992px) {
+			flex-direction: row;
+			height: 100px;
+		}
+	}
+
+	.menu_item {
+		min-height: 100%;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+
+		&:hover::after {
+			content: " ";
+			display: block;
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			left: 50%;
+			bottom: -30%;
+			transform: translate(-50%);
+			background-color: $color-White;
+
+			@media (min-width: 992px) {
+				bottom: 25%;
+			}
+		}
+
+		&_link {
+			color: $color-White;
+			font-family: $font-family-Alata;
+			font-weight: $font-Weight-alata;
+		}
+	}
+}
+
+.header__section {
+	width: 100%;
+	padding-top: 160px;
+	padding-bottom: 160px;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+
+	&_title {
+		width: 100%;
+		padding: 20px;
+
+		font-size: $Font-size * 3;
+		color: $color-White;
+		text-transform: uppercase;
+		line-height: 1;
+
+		border: solid 2px $color-White;
+	}
+
+	@media (min-width: 768px) {
+		&_title {
+			width: 650px;
+			padding: 40px;
+			font-size: $Font-size * 4;
+		}
+	}
+
+	@media (min-width: 992px) {
+		height: calc(100% - 160px);
+	}
+}
+
+// # Hamburger-MENU STYLES
+// ================================
+@media (max-width: 992px) {
+	.header_menu {
+		position: absolute;
+		top: -100vh;
+		left: 0;
+		z-index: 100;
+		transition: all 0.3s;
+
+		width: 100%;
+		height: 100vh;
+		padding-top: 25vh;
+		background-color: $color-Black;
+
+		&-active {
+			top: 0;
+		}
+
+		.menu_item {
+			width: 100%;
+			padding-left: 5vw;
+
+			&:hover::after {
+				width: 80%;
+			}
+		}
+
+		.menu_item_link {
+			width: 100%;
+			display: block;
+			font-size: $Font-size * 3;
+			font-family: $font-family-Josefin;
+			font-weight: $font-Weight-josefin;
+			text-transform: uppercase;
+		}
+	}
+
+	.brand {
+		z-index: 101;
+	}
+
+	.btn_burger {
+		margin: 0 0 0 auto;
+		width: 24px;
+		height: 24px;
+		display: block;
+		position: relative;
+
+		background-color: inherit;
+
+		&::before,
+		&::after,
+		& span {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: white;
+			transition: all 0.3s;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		& span {
+			top: 11px;
+		}
+
+		&-active::before {
+			transform: rotate(45deg);
+			top: 11px;
+		}
+		&-active::after {
+			transform: rotate(135deg);
+			bottom: 11px;
+		}
+		&-active span {
+			// transform: scale(0);
+			display: none;
+		}
+		&-active {
+			// border: solid 2px $color-White;
+			border-radius: 50%;
+			overflow: hidden;
+			z-index: 101;
+		}
+	}
+}
+
+// # MAIN SECTION STYLES
+// ================================
+.section__content {
+	width: 100%;
+	position: relative;
+}
+
+.content_image {
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+
+	@media (min-width: 992px) {
+		width: auto;
+
+		img {
+			width: auto;
+		}
+	}
+}
+
+.content_text {
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	background-color: $color-White;
+
+	p {
+		margin-top: 40px;
+		color: $color-Dark-Gray;
+		font-family: $font-family-Alata;
+		font-weight: $font-Weight-alata;
+		line-height: 2;
+	}
+
+	@media (min-width: 992px) {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		width: 545px;
+		height: 340px;
+		padding: 90px 10px 20px 90px;
+	}
+}
+
+.h2 {
+	color: $color-Black;
+	font-size: $Font-size * 3;
+	font-weight: $font-Weight-josefin;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+// SECTION GRID
+.section__title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn {
+	width: 160px;
+	height: 42px;
+	background-color: $color-White;
+	border: solid 1px $color-Very-Dark-Gray;
+
+	font-family: $font-family-Alata;
+	font-weight: $font-Weight-alata;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+
+	align-self: center;
+
+	&:hover {
+		background-color: $color-Black;
+		color: $color-White;
+	}
+
+	@media (min-width: 1154px) {
+		position: absolute;
+		top: -116px;
+		right: 0;
+	}
+}
+
+.section__grid {
+	margin-top: 80px;
+	position: relative;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+	justify-items: center;
+	gap: 30px;
+
+	@media (min-width: 1200px) {
+		grid-template-columns: repeat(4, auto);
+	}
+}
+
+.grid__item {
+	position: relative;
+	width: 100%;
+
+	// @media (min-width: 768px) {
+	// 	width: 256px;
+	// 	height: 450px;
+	// }
+
+	@media (min-width: 992px) {
+		width: 256px;
+		height: 450px;
+	}
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.grid_link {
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+
+	display: flex;
+	align-items: end;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-color: transparentize($color: $color-Black, $amount: 0.8);
+
+	&:hover {
+		background-color: transparentize($color: $color-White, $amount: 0.2);
+
+		h3 {
+			color: $color-Black;
+		}
+	}
+
+	h3 {
+		color: $color-White;
+		font-size: $Font-size * 2.25;
+		font-weight: $font-Weight-josefin;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+}
+
+// # FOOTER STYLES
+// ================================
+.footer {
+	background-color: $color-Black;
+}
+
+.section__row {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@media (min-width: 992px) {
+		flex-direction: row;
+	}
+}
+
+.section__col {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&:first-child,
+	&:last-child {
+		padding-top: 40px;
+	}
+
+	@media (min-width: 992px) {
+		&:first-child {
+			align-items: flex-start;
+			gap: 0;
+		}
+
+		&:last-child {
+			align-items: flex-end;
+			padding-top: 0;
+		}
+	}
+}
+
+.social_items {
+	flex-direction: row;
+}
+
+.copyright {
+	color: transparentize($color: $color-White, $amount: 0.5);
+	font-family: $font-family-Alata;
+	letter-spacing: 0.1em;
+}
