@@ -18,7 +18,39 @@ export default {
   data() {
     return {};
   },
-  components: { HeaderSection, HeaderNav }
+  components: { HeaderSection, HeaderNav },
+
+  methods: {
+    addBurgerBtn() {
+      const btnHtml =
+        `
+      <!-- Burger button -->
+        <button button class="btn_burger" id = "btnBurger" aria - label="humburger" >
+          <span></span>
+      </button > 
+      `;
+      const navBar = document.querySelector('.navBar');
+      navBar.innerHTML += btnHtml;
+
+      const btnBurger = document.querySelector('.btn_burger');
+      // return btnBurger;
+
+      // manipulate button hamburge scripts
+      // =================================
+      const headerMenu = document.querySelector('.header_menu');
+
+      btnBurger.addEventListener('click', function () {
+        btnBurger.classList.toggle('btn_burger-active');
+        headerMenu.classList.toggle('header_menu-active');
+      });
+    }
+  },
+
+  mounted() {
+    if (window.screen.width <= 992) {
+      this.addBurgerBtn();
+    }
+  }
 }
 </script>
 
