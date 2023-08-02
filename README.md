@@ -16,6 +16,15 @@
 
 ===============================
 
+## Loopstudios landing page solution - for Frontend Mentor with Vue.JS & SCSS
+
+<img src="loopstudios-Vue/themplate/design/desktop-preview.jpg" alt="screen-shot" width="250" >
+
+* Deploy: [landing page](https://miu-cz.github.io/Portfolio/loopstudios-Vue/new-loopstudios/dist/)
+* Sourse: [github](https://github.com/MIU-cz/Portfolio/tree/gh-pages/loopstudios-Vue/new-loopstudios/dist)
+
+===============================
+
 ## Snake - JS + Canvas
 
 <img src="snake/img/Screenshot.png" alt="screen-shot" width="250" >
