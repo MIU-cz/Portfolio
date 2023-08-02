@@ -1,16 +1,22 @@
 <template>
-  <div class="fotter">
+  <div class="appFotter">
+    <footer class="main__section footer">
+      <FooterSection></FooterSection>
+      <FooterAutor></FooterAutor>
 
+    </footer>
   </div>
 </template>
 
 <script>
+import FooterAutor from './footer/FooterAutor.vue';
+import FooterSection from './footer/FooterSection.vue';
+
 export default {
   data() {
-    return {
-
-    }
-  }
+    return {};
+  },
+  components: { FooterSection, FooterAutor }
 }
 </script>
 

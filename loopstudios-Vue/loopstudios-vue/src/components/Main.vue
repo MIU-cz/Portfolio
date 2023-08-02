@@ -1,16 +1,21 @@
 <template>
-	<div class="main">
-
+	<div class="appMain">
+		<main class="main__section">
+			<SectionInteractive></SectionInteractive>
+			<SectionCreations></SectionCreations>
+		</main>
 	</div>
 </template>
   
 <script>
+import SectionCreations from './main/SectionCreations.vue';
+import SectionInteractive from './main/SectionInteractive.vue';
+
 export default {
 	data() {
-		return {
-
-		}
-	}
+		return {};
+	},
+	components: { SectionInteractive, SectionCreations }
 }
 </script>
   

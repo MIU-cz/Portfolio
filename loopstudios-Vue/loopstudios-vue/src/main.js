@@ -5,6 +5,10 @@ import App from './App'
 
 Vue.config.productionTip = false
 
+import './assets/css/normaliz-style-min.css'
+import './assets/css/style.css';
+import './assets/css/fem-footer-style.css';
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

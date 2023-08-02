@@ -1,16 +1,24 @@
 <template>
-  <div class="header">
+  <div class="appHeader">
+    <!-- # HEADER STYLES -->
+    <!-- ================================ -->
+    <header class="main__section header">
+      <HeaderNav></HeaderNav>
+      <HeaderSection />
 
+    </header>
   </div>
 </template>
 
 <script>
+import HeaderNav from './header/HeaderNav.vue';
+import HeaderSection from './header/HeaderSection.vue';
+
 export default {
   data() {
-    return {
-
-    }
-  }
+    return {};
+  },
+  components: { HeaderSection, HeaderNav }
 }
 </script>
 
