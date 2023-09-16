@@ -1,0 +1,50 @@
+// @import url("https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap");
+
+// # TYPOGRAFIKA
+$ff-Forum: "Forum", cursive; // -> headers
+$ff-Inter: "Inter", sans-serif; // -> main text, links
+$fw-400: 400;
+$fw-700: 700;
+
+// # THEME COLOR
+$color-Black: #000000;
+$color-Wite: #ffffff;
+$color-Dark: #0c0c0e;
+$color-Sand: #bb945f;
+$color-Gray: #8e8e8e;
+
+// # SIZING
+$width-main: 1440px;
+$section-height: 600px;
+$nav-height: 90px;
+$footer-height: 250px;
+
+// mixin
+// ====================
+
+@mixin section_grid() {
+	margin-top: 40px;
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@media (min-width: 1200px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+@mixin grid_column() {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 40px;
+
+	width: 100%;
+
+	@media (min-width: 1200px) {
+		width: auto;
+	}
+}

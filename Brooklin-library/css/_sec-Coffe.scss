@@ -1,0 +1,85 @@
+// ## COFFE SHOP SECTION STYLES
+// ###############################
+.section__coffeshop {
+	.section__description {
+		letter-spacing: 2px;
+	}
+}
+
+.section__coffeshop_grid {
+	@include section_grid();
+	gap: 40px;
+
+	.grid__col {
+		@include grid_column();
+
+		.grid__col_title {
+			color: $color-Sand;
+			font-family: $ff-Forum;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 40px;
+			letter-spacing: 2px;
+			text-transform: capitalize;
+		}
+
+		.grid__col_menu {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		&:last-child {
+			align-items: flex-end;
+
+			.grid__col_menu {
+				align-items: flex-end;
+			}
+		}
+	}
+}
+
+.menu_item {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+
+	color: $color-Black;
+	font-family: $ff-Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+
+// .item_name {}
+
+.item_coast {
+	font-family: $ff-Forum;
+
+	&::before {
+		content: " ";
+		display: inline-block;
+		width: 50px;
+		height: 1px;
+		background-color: $color-Sand;
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+}
+
+@media (min-width: 576px) {
+	.menu_item {
+		gap: 60px;
+	}
+
+	.item_coast::before {
+		width: 100px;
+		margin-right: 60px;
+	}
+}

@@ -1,0 +1,113 @@
+// ## FAVORITES SECTION STYLES
+// ###############################
+.section__favorites {
+	position: relative;
+
+	&_filter {
+		width: 100%;
+		margin-top: 40px;
+
+		@media (max-width: 1024px) {
+			position: sticky;
+			top: 0;
+
+			&.sticky {
+				background-color: transparentize($color: $color-Sand, $amount: 0.3);
+				padding: 10px 20px 20px;
+				z-index: 105;
+			}
+		}
+	}
+}
+
+.filter__season {
+	color: $color-Black;
+	font-family: $ff-Inter;
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+
+	.filter_title {
+		text-align: left;
+		font-weight: 700;
+	}
+}
+
+.filter_items {
+	margin-top: 35px;
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	li {
+		width: 120px;
+		display: inline-flex;
+		flex-direction: row;
+		gap: 20px;
+		align-items: center;
+
+		label {
+			width: 85px;
+			height: 34px;
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+
+	li,
+	label,
+	input {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	label {
+		font-weight: 400;
+	}
+
+	input {
+		width: 17px;
+		height: 17px;
+
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		display: inline-block;
+		border: 2px solid $color-Black;
+		border-radius: 50%;
+
+		&:checked {
+			position: relative;
+
+			&::after {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 7.5px;
+				height: 7.5px;
+				border-radius: 50%;
+				background-color: $color-Black;
+			}
+		}
+
+		&:checked + label,
+		&:hover + label {
+			font-weight: 700;
+		}
+	}
+
+	@media (min-width: 576px) {
+		flex-direction: row;
+	}
+
+	@media (min-width: 768px) {
+		width: 700px;
+	}
+}

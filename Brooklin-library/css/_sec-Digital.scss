@@ -1,0 +1,201 @@
+// # DIGITAL LIBRARY CARD STYLES
+// ###############################
+.section__libcard_grid {
+	@include section_grid();
+	gap: 20px;
+
+	.grid__col {
+		@include grid_column();
+
+		align-items: center;
+		gap: 30px;
+
+		.libcard_title {
+			h3 {
+				color: $color-Black;
+				font-family: $ff-Inter;
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.6px;
+			}
+		}
+
+		&:last-child {
+			align-items: center;
+			gap: 40px;
+
+			h4 {
+				color: $color-Black;
+				text-align: center;
+				font-family: $ff-Forum;
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.6px;
+			}
+
+			p {
+				display: flex;
+				width: 85%;
+
+				color: $color-Black;
+				text-align: center;
+				font-family: $ff-Inter;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 40px;
+				letter-spacing: 0.4px;
+
+				@media (min-width: 768px) {
+					width: 600px;
+				}
+
+				@media (min-width: 1200px) {
+					width: 456px;
+					text-align: right;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				align-items: flex-end;
+				gap: 35px;
+			}
+		}
+	}
+}
+
+.libcard__form_cover {
+	width: 100%;
+	border: 3px solid $color-Sand;
+	padding: 20px 20px 30px;
+
+	.findcard_form {
+		.form_cover_bg {
+			width: 100%;
+			background-color: $color-Sand;
+			padding: 20px 20px 25px;
+		}
+
+		.findcard_title {
+			display: inline-block;
+			color: $color-Black;
+			font-family: $ff-Forum;
+			font-size: 30px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 50px;
+			letter-spacing: 0.6px;
+
+			margin-bottom: 20px;
+		}
+
+		input {
+			width: 100%;
+			height: 66px;
+			border-radius: 10px;
+			background: $color-Wite;
+			margin-bottom: 25px;
+			padding: 8px 20px;
+
+			color: $color-Gray;
+			font-family: $ff-Forum;
+			font-size: 30px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 50px;
+			letter-spacing: 0.6px;
+
+			// &::placeholder {
+			// 	color: $color-Gray;
+			// 	font-family: $ff-Forum;
+			// 	font-size: 30px;
+			// 	font-style: normal;
+			// 	font-weight: 400;
+			// 	line-height: 50px;
+			// 	letter-spacing: 0.6px;
+			// }
+		}
+
+		.form__btn_cover {
+			width: 100%;
+		}
+
+		.btn_submit {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 40px;
+			border-radius: 2px;
+			border: 1px solid $color-Black;
+			background-color: $color-Wite;
+
+			color: $color-Black;
+			text-align: center;
+			font-family: $ff-Inter;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 1px;
+
+			&:hover {
+				background-color: $color-Sand;
+				border-color: $color-Sand;
+			}
+		}
+	}
+
+	@media (min-width: 576px) {
+		height: 386px;
+
+		.form_cover_bg {
+			width: 560px;
+			height: 272px;
+		}
+
+		input {
+			width: 520px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		width: 600px;
+	}
+}
+
+.libcard_buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.libcard_btn {
+	display: flex;
+	width: 75px;
+	height: 30px;
+	padding: 10px 0px;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+
+	border-radius: 2px;
+	border: 1px solid $color-Black;
+	background-color: $color-Wite;
+
+	color: $color-Black;
+	text-align: center;
+	font-family: $ff-Inter;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1px;
+
+	&:hover {
+		background-color: $color-Sand;
+		border-color: $color-Sand;
+	}
+}

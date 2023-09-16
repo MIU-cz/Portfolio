@@ -1,0 +1,213 @@
+// # HEADER STYLES
+// ###############################
+.navbar {
+	width: 100%;
+	height: $nav-height;
+
+	color: $color-Wite;
+	background-color: $color-Dark;
+
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	position: relative;
+
+	.navbar__title {
+		h1 {
+			font-family: $ff-Forum;
+			font-weight: $fw-400;
+			font-size: 30px;
+			line-height: 50px;
+			letter-spacing: 0.02em;
+		}
+	}
+
+	.navbar__navmenu {
+		margin: 0 0 0 auto;
+
+		@media (max-width: 992px) {
+			width: 100vw;
+			height: 100vh;
+
+			position: absolute;
+			z-index: 100;
+
+			top: -100vh;
+			right: 0;
+
+			transition: all 0.5s;
+
+			&-active {
+				top: 0;
+				// padding-top: $nav-height;
+			}
+		}
+
+		.navmenu_items {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+
+			@media (max-width: 992px) {
+				width: 332px;
+				height: 570px;
+				padding: 100px 107px;
+				margin: 0 0 0 auto;
+				background-color: $color-Black;
+				text-align: center;
+			}
+
+			@media (min-width: 992px) {
+				flex-direction: row;
+			}
+		}
+
+		a {
+			font-family: $ff-Inter;
+			font-weight: $fw-400;
+			font-size: 20px;
+			line-height: 50px;
+			color: $color-Wite;
+
+			&:hover {
+				color: $color-Sand;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.navbar__userico {
+		width: 28px;
+		height: 28px;
+		margin: 0 0 0 auto;
+		z-index: 100;
+
+		@media (min-width: 992px) {
+			margin: 0 0 0 40px;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			&:hover svg path {
+				fill: $color-Sand;
+			}
+		}
+
+		svg {
+			object-fit: cover;
+		}
+	}
+
+	.btn_burger {
+		margin-left: 40px;
+		width: 45px;
+		height: 20px;
+		display: block;
+		position: relative;
+		z-index: 101;
+		background-color: $color-Black;
+
+		&::before,
+		&::after,
+		& span {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background-color: white;
+			transition: all 0.3s;
+		}
+
+		&:hover {
+			&::before,
+			&::after,
+			& span {
+				background-color: $color-Sand;
+			}
+		}
+
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		& span {
+			top: 8px;
+		}
+
+		// &-active {
+		// 	margin-left: 27px;
+		// }
+
+		&-active::before {
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		&-active::after {
+			transform: rotate(135deg);
+			bottom: 9px;
+		}
+		&-active span {
+			// transform: scale(0);
+			display: none;
+		}
+
+		@media (min-width: 992px) {
+			display: none;
+		}
+	}
+}
+
+.section__wellcome {
+	width: 100%;
+	height: $section-height;
+	padding: 0;
+	position: relative;
+
+	background-size: cover;
+	background-image: linear-gradient(
+			180deg,
+			#0c0c0e 0%,
+			#0c0c0e 0.01%,
+			rgba(18, 18, 21, 0.1) 100%
+		),
+		url(../images/header/Welcome-bg.png);
+	background-position: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: start;
+
+	&_title {
+		max-width: 600px;
+		margin: 220px auto auto 0;
+		padding: 35px 40px;
+		background-color: $color-Dark;
+
+		h2,
+		p {
+			font-family: $ff-Forum;
+			font-weight: $fw-400;
+			font-size: inherit;
+			line-height: 50px;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			text-align: center;
+			color: $color-Wite;
+			word-wrap: break-word;
+		}
+
+		@media (min-width: 576px) {
+			height: 220px;
+			font-size: 40px;
+		}
+	}
+}

@@ -1,0 +1,224 @@
+// ### LIBRARY GRID
+// ###############################
+.favorites_library_wraper {
+	width: 100%;
+	height: 100%;
+	margin-top: 35px;
+	position: relative;
+}
+
+.section__favorites_library {
+	width: 100%;
+	// margin-top: 35px;
+	position: relative;
+	top: 0;
+	transition: animation 2s;
+
+	display: grid;
+	grid-auto-flow: row;
+	// grid-template-columns: 1fr;
+	justify-items: center;
+	row-gap: 40px;
+
+	// @media (min-width: 982px) {
+	// 	grid-template-columns: repeat(2, 1fr);
+	// 	justify-content: space-between;
+	// 	gap: 40px;
+	// }
+
+	@media (min-width: 1220px) {
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-between;
+	}
+
+	// &.fadeIn {
+	// 	animation: fadeIn 2s;
+	// 	z-index: 101;
+	// 	position: relative;
+	// }
+
+	// &.fadeOut {
+	// 	animation: fadeOut 2s forwards;
+	// 	z-index: -1;
+	// 	position: absolute;
+	// }
+
+	&.hide {
+		display: none;
+	}
+
+	&.show {
+		display: grid;
+	}
+	&.fadeOut {
+		transition: 2s;
+		animation: fadeOut 3s forwards;
+	}
+
+	&.fadeIn {
+		transition: 2s;
+		animation: fadeIn 3s forwards;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		position: absolute;
+		z-index: -10;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		display: none;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		position: relative;
+		z-index: 10;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.library__item {
+	width: 100%;
+}
+
+.item__container_content {
+	width: 100%;
+
+	padding: 15px 20px;
+	border: 1px solid $color-Black;
+
+	.content_stuff {
+		color: $color-Black;
+		font-family: $ff-Forum;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 37px;
+		letter-spacing: 2px;
+		text-transform: capitalize;
+
+		&::after {
+			content: " ";
+			display: block;
+			width: 60px;
+			height: 1px;
+			background-color: $color-Sand;
+		}
+	}
+
+	.content_title {
+		margin-top: 20px;
+
+		h3,
+		h4 {
+			color: $color-Black;
+			font-family: $ff-Inter;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 40px;
+			letter-spacing: 2px;
+		}
+
+		.book_title {
+			text-transform: uppercase;
+		}
+		.book_autor {
+			text-transform: capitalize;
+		}
+	}
+
+	.content_description {
+		margin-top: 20px;
+		width: 100%;
+		// height: 320px;
+
+		color: $color-Black;
+		font-family: $ff-Inter;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 40px;
+		letter-spacing: 2px;
+		text-transform: capitalize;
+	}
+
+	.content_btn {
+		margin-top: 15px;
+		width: 75px;
+		height: 30px;
+
+		.btn {
+			width: 100%;
+			height: 100%;
+
+			border-radius: 2px;
+			border: 1px solid $color-Black;
+			background-color: $color-Wite;
+
+			color: $color-Black;
+			text-align: center;
+			font-family: $ff-Inter;
+			font-size: 10px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 1px;
+
+			&-buy {
+				&:hover {
+					border-color: $color-Sand;
+					background-color: $color-Sand;
+				}
+			}
+
+			&-own {
+				color: $color-Sand;
+				border-color: $color-Sand;
+				cursor: auto;
+			}
+		}
+	}
+}
+
+.item__container_bookcover {
+	max-width: 200px;
+	max-height: 300px;
+
+	@media (min-width: 610px) {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+
+	img {
+		object-fit: cover;
+	}
+}
+
+@media (min-width: 610px) {
+	.library__item {
+		width: 590px;
+		height: 555px;
+		position: relative;
+	}
+
+	.item__container_content {
+		max-width: 550px;
+		height: 100%;
+	}
+
+	.content_description {
+		max-width: 355px;
+		height: 320px;
+	}
+}
