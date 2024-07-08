@@ -1,6 +1,14 @@
 # Portfolio
 
-## My CV
+## My new CV
+
+<img src="miu-cv/assets/img/Screenshot-html.png" alt="screen-shot" width="250" >
+
+* Deploy: [CV MIU](https://miu-cz.github.io/Portfolio/miu-cv/)
+
+===============================
+
+## My CV - 2023
 
 <img src="my-cv/img/Screenshot.png" alt="screen-shot" width="250" >
 
