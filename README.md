@@ -10,9 +10,9 @@
 
 ## My CV - 2023
 
-<img src="my-cv/img/Screenshot.png" alt="screen-shot" width="250" >
+<img src="my-cv-2023/img/Screenshot.png" alt="screen-shot" width="250" >
 
-* Deploy: [CV MIU](https://miu-cz.github.io/Portfolio/my-cv/)
+* Deploy: [CV MIU](https://miu-cz.github.io/Portfolio/my-cv-2023/)
 
 ===============================
 
