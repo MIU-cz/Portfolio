@@ -594,8 +594,14 @@ h6 {
 .about_me_content p {
   padding-top: 10px;
 }
-.about_me_content summary {
+.about_me_content .link_summary {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0;
+  margin-left: auto;
   text-align: right;
+  cursor: pointer;
 }
 
 .education {
